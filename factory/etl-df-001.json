@@ -1,0 +1,9 @@
+{
+	"name": "etl-df-001",
+	"location": "japaneast",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "7eab4512-ec98-497c-9282-9b0ef339a72c",
+		"tenantId": "0f8f3166-2a6d-49d8-8a4c-13a6d7c8a02e"
+	}
+}
