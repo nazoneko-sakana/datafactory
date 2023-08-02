@@ -16,15 +16,16 @@
 			"transformations": [],
 			"scriptLines": [
 				"source(output(",
-				"          id as string,",
+				"          id as integer,",
 				"          val1 as string,",
 				"          val2 as string,",
 				"          var3 as string,",
-				"          date1 as string",
+				"          date1 as timestamp",
 				"     ),",
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
-				"     ignoreNoFilesFound: false) ~> source1"
+				"     ignoreNoFilesFound: false,",
+				"     wildcardPaths:['*.csv']) ~> source1"
 			]
 		}
 	}
