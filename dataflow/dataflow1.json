@@ -35,8 +35,8 @@
 				"     rowUrlColumn: 'filename',",
 				"     wildcardPaths:['*.csv']) ~> source1",
 				"source1 sort(asc(id, true)) ~> sort1",
-				"sort1 split(ERROR_FUNCTION('id=1'),",
-				"     disjoint: false) ~> split1@(テスト１, )"
+				"sort1 split(id==1,",
+				"     disjoint: false) ~> split1@(テスト１, その他)"
 			]
 		}
 	}
