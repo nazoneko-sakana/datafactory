@@ -13,7 +13,11 @@
 				}
 			],
 			"sinks": [],
-			"transformations": [],
+			"transformations": [
+				{
+					"name": "sort1"
+				}
+			],
 			"scriptLines": [
 				"source(output(",
 				"          id as integer,",
@@ -25,7 +29,8 @@
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false,",
-				"     wildcardPaths:['*.csv']) ~> source1"
+				"     wildcardPaths:['*.csv']) ~> source1",
+				"source1 sort(asc(id, true)) ~> sort1"
 			]
 		}
 	}
