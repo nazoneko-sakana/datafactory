@@ -36,7 +36,7 @@
 				"     wildcardPaths:['*.csv']) ~> source1",
 				"source1 sort(asc(id, true)) ~> sort1",
 				"sort1 split(id==1,",
-				"     disjoint: false) ~> split1@(テスト１, その他)"
+				"     disjoint: false) ~> split1@(id1, idEtc)"
 			]
 		}
 	}
