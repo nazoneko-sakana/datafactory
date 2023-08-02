@@ -30,6 +30,10 @@
 				}
 			],
 			"scriptLines": [
+				"parameters{",
+				"     filename as string,",
+				"     timestamp as string",
+				"}",
 				"source(output(",
 				"          id as integer,",
 				"          val1 as string,",

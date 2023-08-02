@@ -79,7 +79,17 @@
 				"typeProperties": {
 					"dataflow": {
 						"referenceName": "dataflow1",
-						"type": "DataFlowReference"
+						"type": "DataFlowReference",
+						"parameters": {
+							"filename": {
+								"value": "'@{activity('get_fiilename').output.itemName}'",
+								"type": "Expression"
+							},
+							"timestamp": {
+								"value": "'@{activity('get_fiilename').output.lastModified}'",
+								"type": "Expression"
+							}
+						}
 					},
 					"compute": {
 						"coreCount": 8,
