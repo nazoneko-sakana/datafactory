@@ -23,11 +23,11 @@
 			],
 			"scriptLines": [
 				"source(output(",
-				"          id as string,",
+				"          id as integer,",
 				"          val1 as string,",
 				"          val2 as string,",
 				"          var3 as string,",
-				"          date1 as string",
+				"          date1 as timestamp",
 				"     ),",
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
@@ -35,8 +35,8 @@
 				"     rowUrlColumn: 'filename',",
 				"     wildcardPaths:['*.csv']) ~> source1",
 				"source1 sort(asc(id, true)) ~> sort1",
-				"sort1 split(ERROR_FUNCTION(''),",
-				"     disjoint: false) ~> split1@(, )"
+				"sort1 split(ERROR_FUNCTION('id=1'),",
+				"     disjoint: false) ~> split1@(テスト１, )"
 			]
 		}
 	}
